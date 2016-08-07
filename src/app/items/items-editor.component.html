@@ -1,0 +1,13 @@
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <h1>Item Editor List</h1>
+        <h1>General Items</h1>
+        <ul>  
+            <li *ngFor="#item of generalItems">
+                <a (click)="editItem(item)">{{item.name}}</a>
+            </li>
+        </ul>
+
+        <button type="button" class="btn btn-default" [routerLink]="['/admin/items/new']">New Item</button>
+    </div>
+</div>
