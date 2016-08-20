@@ -1,10 +1,10 @@
-import { provideRouter, RouterConfig } from '@angular/router';
+/*import { provideRouter, RouterConfig } from '@angular/router';
 
 import { HomeRoutes } from './home';
 import { AdminRoutes } from './admin'
 import { DemographicsRoutes } from './demographics';
 import { DeitiesRoutes } from './deities'
-import { ItemsRoutes } from './items';
+//import { ItemsRoutes } from './items';
 
 //import { CrisisCenterRoutes } from './crisis-center/crisis-center.routes';
 //import { CrisisDetailGuard }  from './crisis-center/crisis-detail.guard';
@@ -15,7 +15,7 @@ const routes: RouterConfig = [
   ...AdminRoutes,
   ...DemographicsRoutes,
   ...DeitiesRoutes,
-  ...ItemsRoutes,
+  //...ItemsRoutes,
 ];
 
 export const APP_ROUTER_PROVIDERS = [

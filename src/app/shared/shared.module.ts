@@ -11,8 +11,13 @@ import { FormsModule }         from '@angular/forms';
 export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
-      ngModule: SharedModule,
-      providers: [ ]
+      ngModule: SharedModule
+      //providers: [ ]
     };
   }
 }
+
+@NgModule({
+  exports:   [ SharedModule ],
+})
+export class SharedRootModule { }

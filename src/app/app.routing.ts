@@ -2,9 +2,11 @@ import { Routes,
          RouterModule } from '@angular/router';
 
 export const routes: Routes = [
-  //{ path: '', redirectTo: 'contact', pathMatch: 'full'},
-  //{ path: 'crisis', loadChildren: 'app/crisis/crisis.module' },
-  //{ path: 'heroes', loadChildren: 'app/hero/hero.module' }
+  { path: '', redirectTo: 'home', pathMatch: 'full'},
+  { path: 'demographics', loadChildren: 'app/demographics/demographics.module' },
+  { path: 'items', loadChildren: 'app/items/item.module' },
+  /*{ path: 'deities', loadChildren: 'app/deities/deity.module' },
+  { path: 'admin', loadChildren: 'app/admin/admin.module' }*/
 ];
 
 export const routing = RouterModule.forRoot(routes);

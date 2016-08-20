@@ -1,4 +1,4 @@
-import { RouterConfig } from '@angular/router';
+/*import { RouterConfig } from '@angular/router';
 import { AdminComponent } from '../admin'
 import { ItemsEditorComponent, ItemEditorComponent } from '../items'
 export const AdminRoutes: RouterConfig = [
@@ -9,3 +9,4 @@ export const AdminRoutes: RouterConfig = [
     ] },
   
 ]
+*/
