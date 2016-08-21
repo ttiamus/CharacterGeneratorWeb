@@ -5,5 +5,5 @@ import { ItemAdminComponent } from './item-admin.component';
 
 export const routing = RouterModule.forChild([
   { path: '', component: ItemListAdminComponent} , // /admin/items
-  { path: 'item/:id', component: ItemAdminComponent }
+  { path: ':id', component: ItemAdminComponent }
 ]);

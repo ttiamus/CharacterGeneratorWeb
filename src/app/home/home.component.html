@@ -1,1 +1,14 @@
-<h1>Home Component</h1>
+<div class="row">
+    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3 no-float">
+        <ul class="nav nav-pills nav-stacked">
+            <li role="presentation" routerLinkActive="active"><a routerLink="welcome">Welcome</a></li>
+            <li role="presentation" routerLinkActive="active"><a routerLink="demographics">Demographics</a></li>
+            <li role="presentation" routerLinkActive="active"><a routerLink="items">Items</a></li>
+            <li role="presentation" routerLinkActive="active"><a routerLink="armors">Armors</a></li>
+            <li role="presentation" routerLinkActive="active"><a routerLink="weapons">Weapons</a></li>
+        </ul>
+    </div>
+    <div class="col-xs-9 col-sm-9 col-md-9 col-lg-9 no-float">
+        <router-outlet></router-outlet>
+    </div>
+</div>

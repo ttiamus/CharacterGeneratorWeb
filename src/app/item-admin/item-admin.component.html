@@ -1,33 +1,31 @@
-<!-- Form for adding, updating and deleting an item -->
-
 <div class="row" *ngIf="item">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
         <form>
             <div class="form-group">
                 <label for="itemName">Name</label>
-                <input type="text" class="form-control" id="itemName" placeholder="Name" [(ngModel)]="item.name">
+                <input type="text" class="form-control" id="itemName" name="name" placeholder="Name" [(ngModel)]="item.name">
             </div>
 
             <div class="form-group">
                 <label for="itemDescription">Description</label>
-                <textarea class="form-control" rows="3" [(ngModel)]="item.description"></textarea>
+                <textarea class="form-control" id="itemDescription" name="itemDescription" rows="3" [(ngModel)]="item.description"></textarea>
             </div>
             
             <div class="form-group">
                 <label for="itemType">Item Type</label>
-                <select class="form-control" [(ngModel)]="item.type">
+                <select class="form-control" id="itemType" name="itemType" [(ngModel)]="item.type">
                     <option *ngFor="let type of types">{{type}}</option>
                 </select>
             </div>
 
             <div class="form-group">
                 <label for="itemCost">Cost</label>
-                <input type="number" step="0.1" class="form-control" id="itemCost" placeholder="Email" [(ngModel)]="item.cost">
+                <input type="number" step="0.1" class="form-control" id="itemCost" name="itemCost" placeholder="Email" [(ngModel)]="item.cost">
             </div>
 
             <div class="form-group">
                 <label for="itemWeight">Weight</label>
-                <input type="number" step="0.1" class="form-control" id="itemWeight" placeholder="Weight" [(ngModel)]="item.weight">
+                <input type="number" step="0.1" class="form-control" id="itemWeight" name="itemWeight" placeholder="Weight" [(ngModel)]="item.weight">
             </div>
 
             <button type="submit" class="btn btn-default" (click)="saveItem()">Save</button>

@@ -15,8 +15,7 @@ import { routing }            from './items.routing';
                   ItemComponent, 
                   ItemListComponent,
                   ],
-  providers: [ ItemService ]
-  //exports: [ Item ]
-  
+  providers: [ ItemService ],
+  exports: [ Item ] 
 })
 export default class ItemModule { }

@@ -1,7 +1,7 @@
 import { NgModule }           from '@angular/core';
 import { SharedModule }       from '../shared/shared.module';
 
-import { AdminComponent } from './admin.component';
+import { AdminComponent }      from './admin.component';
 
 import { routing }            from './admin.routing';
 
@@ -9,4 +9,4 @@ import { routing }            from './admin.routing';
   imports:      [ SharedModule, routing ],
   declarations: [ AdminComponent ]
 })
-export default class AdminModule { }
+export class AdminModule { }
