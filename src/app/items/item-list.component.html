@@ -1,9 +1,8 @@
 <div class="row">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-        <h1>Item Detail List</h1>
         <h1>General Items</h1>
             <ul>  
-                <li *ngFor="#item of generalItems">
+                <li *ngFor="let item of generalItems">
                     <a href="#">{{item.name}}</a>
                 </li>
             </ul>

@@ -10,13 +10,8 @@ import { routing }            from './item-admin.routing';
 
 @NgModule({
   imports:      [ SharedModule, routing ],
-  declarations: [ //Item,
-                  ItemAdminComponent, 
-                  ItemListAdminComponent,
-                  
-                  ],
-  providers: [ ItemAdminService ],
-  //exports: [ Item ]
-  
+  declarations: [ ItemAdminComponent, 
+                  ItemListAdminComponent ],
+  providers: [ ItemAdminService ]
 })
 export default class ItemAdminModule { }
