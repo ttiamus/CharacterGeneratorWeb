@@ -2,7 +2,6 @@ import { Injectable } from '@angular/core';
 
 import { Item } from './item.model'
 
-
 let ITEMS = [
   new Item(11, 'Bedroll', 'nap time', 'Adventuring Gear', 0.1, 5),
   new Item(12, 'Blanket', 'swaddle me close', 'Adventuring Gear', 0.5, 3),
@@ -44,7 +43,8 @@ let typesPromise = Promise.resolve(TYPES);
 @Injectable()
 export class ItemService {
   
-  getItem(id: number | string) {
+  getItem(id: number | string) 
+  {
       return itemsPromise.then(items => items.find(item => item.id === +id));
   }
 

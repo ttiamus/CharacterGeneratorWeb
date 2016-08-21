@@ -11,7 +11,6 @@ import { routing }            from './item-admin.routing';
 @NgModule({
   imports:      [ SharedModule, routing ],
   declarations: [ //Item,
-                  //ItemAdminService, 
                   ItemAdminComponent, 
                   ItemListAdminComponent,
                   

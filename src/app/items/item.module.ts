@@ -10,12 +10,11 @@ import { routing }            from './items.routing';
 
 @NgModule({
   imports:      [ SharedModule, routing ],
-  declarations: [ Item,
-                  ItemService, 
+  declarations: [ //Item,
                   ItemComponent, 
                   ItemListComponent,
                   ],
   providers: [ ItemService ],
-  exports: [ Item ] 
+  //exports: [ Item ] 
 })
 export default class ItemModule { }
