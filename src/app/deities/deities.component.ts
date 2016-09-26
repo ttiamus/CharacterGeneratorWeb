@@ -4,7 +4,7 @@ import { Deity } from '../deities';
 //import { Deity } from '../deity/deity.model';
 
 @Component({
-  moduleId: module.id,
+  //moduleId: module.id,
   selector: 'cg-deity',
   templateUrl: 'deity.component.html'
 })

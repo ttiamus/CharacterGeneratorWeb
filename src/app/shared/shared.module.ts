@@ -5,7 +5,7 @@ import { FormsModule }         from '@angular/forms';
 
 @NgModule({
   imports:      [ CommonModule ],
-  declarations: [  ],
+  //declarations: [  ],
   exports:      [ CommonModule, FormsModule ]
 })
 export class SharedModule {

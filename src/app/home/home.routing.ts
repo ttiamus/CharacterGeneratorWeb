@@ -7,7 +7,7 @@ export const routing = RouterModule.forChild([
     children: [
       { path: '', redirectTo: 'demographics', pathMatch: "full"},
       { path: 'demographics', loadChildren: 'app/demographics/demographics.module' },
-      { path: 'items', loadChildren: 'app/items/item.module' },
+      //{ path: 'items', loadChildren: 'app/items/item.module' },
       /*{ path: 'deities', loadChildren: 'app/deities/deity.module' },*/
     ]}
 ]);

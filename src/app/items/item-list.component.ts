@@ -3,7 +3,7 @@ import { Component, OnInit } from '@angular/core';
 import { Item } from './item.model'
 
 @Component({
-    moduleId: module.id,
+    //moduleId: module.id,
     selector: 'cg-item-list',
     templateUrl: 'item-list.component.html',
 })

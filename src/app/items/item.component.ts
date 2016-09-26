@@ -4,7 +4,7 @@ import { Component, OnInit } from '@angular/core';
 import { ItemService } from './item.service'
 
 @Component({
-    moduleId: module.id,
+    //moduleId: module.id,
     selector: 'cg-item',
     templateUrl: 'item.component.html',
 })

@@ -1,10 +1,10 @@
-import { PathfinderCharacterGenPage } from './app.po';
+import { MigrationProjectPage } from './app.po';
 
-describe('pathfinder-character-gen App', function() {
-  let page: PathfinderCharacterGenPage;
+describe('migration-project App', function() {
+  let page: MigrationProjectPage;
 
   beforeEach(() => {
-    page = new PathfinderCharacterGenPage();
+    page = new MigrationProjectPage();
   });
 
   it('should display message saying app works', () => {

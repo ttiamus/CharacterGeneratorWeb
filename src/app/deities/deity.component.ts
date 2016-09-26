@@ -3,7 +3,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Deity } from '../deities';
 
 @Component({
-  moduleId: module.id,
+  //moduleId: module.id,
   selector: 'cg-deity',
   templateUrl: 'deity.component.html'
 })

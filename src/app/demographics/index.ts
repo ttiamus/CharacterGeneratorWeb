@@ -1,2 +1,2 @@
-export * from './demographics.component';
-export * from './demographics.routes'
+//export * from './demographics.component';
+//export * from './demographics.routes'

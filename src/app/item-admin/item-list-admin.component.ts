@@ -5,7 +5,7 @@ import { Item } from './item-admin.model'
 import { ItemAdminService } from './item-admin.service'
 
 @Component({
-    moduleId: module.id,
+    //moduleId: module.id,
     selector: 'cg-item-list-admin',
     templateUrl: 'item-list-admin.component.html',
 })

@@ -5,10 +5,10 @@ import { StatsComponent } from '../stats'
 import { Deity, DeityComponent } from '../deities'
 
 @Component({
-    moduleId: module.id,
-    selector: 'cg-demographics',
+    //moduleId: module.id,
+    //selector: 'cg-demographics',
     templateUrl: 'demographics.component.html',
-    directives: [StatsComponent, DeityComponent],
+    
     providers: [CharacterService]
 })
 

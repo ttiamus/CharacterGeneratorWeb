@@ -3,7 +3,7 @@ import { Component, Input } from '@angular/core';
 import { Stats } from './stats.model';
 
 @Component({
-  moduleId: module.id,
+  //moduleId: module.id,
   selector: 'cg-stats',
   templateUrl: 'stats.component.html'
 })
