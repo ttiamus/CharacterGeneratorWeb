@@ -6,7 +6,5 @@ export class Stats {
     wisdom: number = 10;
     charisma: number = 10;
     
-    constructor()
-    {
-    }
+    constructor() { }
 }

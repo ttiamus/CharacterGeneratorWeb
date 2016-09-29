@@ -4,14 +4,19 @@ import { SharedModule }       from '../shared/shared.module';
 import { Item }               from './item.model';
 import { ItemService }        from './item.service';
 import { ItemComponent }      from './item.component';
+import { ItemDetailComponent } from './item-detail.component';
 import { ItemListComponent }  from './item-list.component';
+import { ItemHomeComponent }  from './item-home.component';
 
-import { routing }            from './items.routing';
+import { itemRouting }        from './items.routing';
 
 @NgModule({
-  imports:      [ SharedModule, routing ],
+  imports:      [ SharedModule, 
+                  itemRouting ],
   declarations: [ ItemComponent, 
-                  ItemListComponent ],
-  providers: [ ItemService ]
+                  ItemDetailComponent,
+                  ItemListComponent,
+                  ItemHomeComponent ],
+  providers:    [ ItemService ]
 })
-export default class ItemModule { }
+export class ItemModule { }

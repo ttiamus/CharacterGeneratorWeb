@@ -4,13 +4,10 @@ import { RouterLinkActive } from '@angular/router';
 
 
 @Component({
-    //moduleId: module.id,
     selector: 'cg-admin',
-    templateUrl: 'admin.component.html',
-    
+    templateUrl: 'admin.component.html',  
 })
 
 export class AdminComponent implements OnInit {
-    
     ngOnInit() { }
 }

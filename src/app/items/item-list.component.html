@@ -3,8 +3,9 @@
         <h1>General Items</h1>
             <ul>  
                 <li *ngFor="let item of generalItems">
-                    <a href="#">{{item.name}}</a>
+                    <a (click)="goToDetail(item)">{{item.name}}</a>
                 </li>
             </ul>
     </div>
 </div>
+<router-outlet></router-outlet>

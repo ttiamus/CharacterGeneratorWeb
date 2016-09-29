@@ -1,22 +1,27 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
 
 import { Item } from './item.model'
+import { ItemService } from './item.service'
 
 @Component({
-    //moduleId: module.id,
-    selector: 'cg-item-list',
     templateUrl: 'item-list.component.html',
 })
 
 export class ItemListComponent implements OnInit {
     generalItems: Item[];
 
+    constructor( 
+        private router: Router, 
+        private route: ActivatedRoute,
+        private service: ItemService ) { }
+
     ngOnInit() { 
-     this.generalItems = [
-       { 'id': 11, 'name': 'Chewbacca', description:'hairy', type:'wookie', cost:1, weight:1 },
-       { 'id': 12, 'name': 'Rey', description:'human', type:'woman', cost:1, weight:1 },
-       { 'id': 13, 'name': 'Finn (FN2187)', description:'traitor', type:'clone trooper', cost:1, weight:1 },
-       { 'id': 14, 'name': 'Han Solo', description:'shot first', type:'wookie', cost:1, weight:1 },
-       { 'id': 15, 'name': 'Leia Organa', description:'wookie', type:'wookie', cost:1, weight:1 }
-     ];}
+        this.service.getItems().then(items => this.generalItems = items);
+    }
+    
+    goToDetail(item: Item)
+    {
+        this.router.navigate([item.id], {relativeTo: this.route});
+    }
 }

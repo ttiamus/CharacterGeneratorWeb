@@ -1,13 +1,7 @@
 export class Saves {
-    fortitude: number;
-    reflex: number;
-    will: number;
+    fortitude: number = 0;
+    reflex: number = 0;
+    will: number = 0;
     
-    constructor()
-    {
-        this.fortitude = 0;
-        this.reflex = 0;
-        this.will = 0;
-
-    }
+    constructor() { }
 }

@@ -14,11 +14,11 @@
     <div class="row">
         <div class="form-group width100">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                <button type="button" class="btn btn-default displayBlock width100" (click)="log()">Select Deity</button>
+                <button type="button" class="btn btn-default displayBlock width100">Select Deity</button>
                 <label for="diety">Diety</label>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                <select [(ngModel)]="character.alignment" (ngModelChange)="log($event)" class="form-control">
+                <select [(ngModel)]="character.alignment" class="form-control">
                     <option [value]="alignment" *ngFor="let alignment of alignments">{{alignment}}</option>
                 </select>
                 <label for="alignment">Alignment</label>
@@ -63,7 +63,5 @@
 
     <cg-stats [stats] = character.stats></cg-stats>
 </div>
-
-
 
 <button (click)="log()">log</button>

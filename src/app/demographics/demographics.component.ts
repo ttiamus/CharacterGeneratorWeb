@@ -1,15 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 
-import { Character, CharacterService } from '../character'
-import { StatsComponent } from '../stats'
-import { Deity, DeityComponent } from '../deities'
+import { CharacterService } from '../character/character.service';  //in app module providers for global registration
+import { Character } from '../character/character.model'
 
 @Component({
-    //moduleId: module.id,
-    //selector: 'cg-demographics',
     templateUrl: 'demographics.component.html',
-    
-    providers: [CharacterService]
 })
 
 export class DemographicsComponent implements OnInit {
@@ -22,10 +17,6 @@ export class DemographicsComponent implements OnInit {
             "Lawful Good", "Neutral Good", "Chaotic Good", 
             "Neutral Good", "True Neutral", "Neutral Good",, 
             "Lawful Evil", "Neutral Evil", "Chaotic Evil",]
-     }
-     
-     updateDeity(deity: Deity) {
-        this.character.deity = deity;
      }
      
      log()

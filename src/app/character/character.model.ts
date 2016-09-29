@@ -1,6 +1,5 @@
-import { Stats } from '../stats';
+import { Stats } from '../stats/stats.model';
 import { Saves } from './saves.model';
-import { Deity } from '../deities'
 
 export class Character {
     id: string = null;
@@ -9,7 +8,6 @@ export class Character {
     
     characterName: string = "";
     playerName: string = "";
-    deity: Deity = new Deity();
     gender: string = "";
     age: number = null;
     height: number = null;

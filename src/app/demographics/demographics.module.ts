@@ -2,13 +2,15 @@ import { NgModule }           from '@angular/core';
 import { SharedModule }       from '../shared/shared.module';
 
 import { DemographicsComponent } from './demographics.component';
-import { StatsComponent } from '../stats'
-import { DeityComponent } from '../deities'
+import { StatsModule } from '../stats/stats.module';
 
-import { routing }            from './demographics.routing';
+import { demographicsRouting } from './demographics.routing';
 
 @NgModule({
-  imports:      [ SharedModule, routing ],
-  declarations: [ DemographicsComponent, StatsComponent, DemographicsComponent ]
+  imports:      [ //DeityModule, 
+                  StatsModule, 
+                  SharedModule, 
+                  demographicsRouting ],
+  declarations: [ DemographicsComponent ],
 })
-export default class DemographicsModule { }
+export class DemographicsModule { }

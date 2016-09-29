@@ -3,20 +3,28 @@ import { BrowserModule  } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent }   from './app.component';
-import { HomeModule }     from './home/home.module';
+
 import { AdminModule } from './admin/admin.module';
+import { DemographicsModule } from './demographics/demographics.module';
+import { ItemModule } from './items/item.module';
 import { SharedModule } from './shared/shared.module';
 
-import { routing }        from './app.routing';
+import { CharacterService } from './character/character.service';
+
+
+import { routing, appRoutingProviders }        from './app.routing';
 
 @NgModule({
     imports:      [ BrowserModule, 
                     HttpModule,
                     routing,
-                    HomeModule,
+                    SharedModule.forRoot(),
                     AdminModule,
-                    SharedModule.forRoot() ],
-    declarations: [AppComponent],
-    bootstrap:    [AppComponent],
+                    DemographicsModule,
+                    ItemModule ],
+    declarations: [ AppComponent ],
+    providers:    [ appRoutingProviders,
+                    CharacterService ],
+    bootstrap:    [ AppComponent ],
 })
 export class AppModule {}

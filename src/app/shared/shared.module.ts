@@ -5,14 +5,12 @@ import { FormsModule }         from '@angular/forms';
 
 @NgModule({
   imports:      [ CommonModule ],
-  //declarations: [  ],
   exports:      [ CommonModule, FormsModule ]
 })
 export class SharedModule {
   static forRoot(): ModuleWithProviders {
     return {
       ngModule: SharedModule
-      //providers: [ ]
     };
   }
 }
