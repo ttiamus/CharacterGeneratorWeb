@@ -1,10 +1,32 @@
 import { Routes,
          RouterModule } from '@angular/router';
 
-const appRoutes: Routes = [
-  //{ path: '', redirectTo: 'home', pathMatch: 'full'},
-  //{ path: 'admin', loadChildren: 'app/admin/admin.module' },
+const adminRoutes: Routes = [
+    {
+        path: 'admin',
+        loadChildren: 'app/admin/admin.module#AdminModule',
+    }
+];
+
+const itemRoutes: Routes = [
+    {
+        path: 'items',
+        loadChildren: 'app/items/item.module#ItemModule',
+    }
 ]
+
+const demographicsRoutes: Routes = [
+    {
+        path: 'demographics',
+        loadChildren: 'app/demographics/demographics.module#DemographicsModule',
+    }
+]
+
+const appRoutes: Routes = [
+  ...adminRoutes,
+  ...itemRoutes,
+  ...demographicsRoutes
+];
 
 export const appRoutingProviders: any[] = [
 

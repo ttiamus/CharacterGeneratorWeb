@@ -3,10 +3,10 @@ import { SharedModule }       from '../shared/shared.module';
 
 import { AdminComponent }      from './admin.component';
 
-import { routing }            from './admin.routing';
+import { adminRouting }            from './admin.routing';
 
 @NgModule({
-  imports:      [ SharedModule, routing ],
+  imports:      [ SharedModule, adminRouting ],
   declarations: [ AdminComponent ]
 })
 export class AdminModule { }

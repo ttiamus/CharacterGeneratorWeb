@@ -4,7 +4,6 @@ import { RouterLinkActive } from '@angular/router';
 
 
 @Component({
-    selector: 'cg-admin',
     templateUrl: 'admin.component.html',  
 })
 

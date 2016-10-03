@@ -14,4 +14,4 @@ import { routing }            from './item-admin.routing';
                   ItemListAdminComponent ],
   providers: [ ItemAdminService ]
 })
-export default class ItemAdminModule { }
+export class ItemAdminModule { }

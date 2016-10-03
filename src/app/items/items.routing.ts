@@ -4,8 +4,9 @@ import { Routes, RouterModule }  from '@angular/router';
 import { ItemComponent } from './item.component';
 
 const itemRoutes: Routes = [
-  { path: 'items', 
-    component: ItemComponent
+  { path: '', 
+    component: ItemComponent,
+    //need to readd detail component
   }
 ]
 

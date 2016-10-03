@@ -4,9 +4,9 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent }   from './app.component';
 
-import { AdminModule } from './admin/admin.module';
-import { DemographicsModule } from './demographics/demographics.module';
-import { ItemModule } from './items/item.module';
+//import { AdminModule } from './admin/admin.module';
+//import { DemographicsModule } from './demographics/demographics.module';
+//import { ItemModule } from './items/item.module';
 import { SharedModule } from './shared/shared.module';
 
 import { CharacterService } from './character/character.service';
@@ -19,9 +19,10 @@ import { routing, appRoutingProviders }        from './app.routing';
                     HttpModule,
                     routing,
                     SharedModule.forRoot(),
-                    AdminModule,
-                    DemographicsModule,
-                    ItemModule ],
+                    //AdminModule,
+                    //DemographicsModule,
+//                    ItemModule 
+                    ],
     declarations: [ AppComponent ],
     providers:    [ appRoutingProviders,
                     CharacterService ],
