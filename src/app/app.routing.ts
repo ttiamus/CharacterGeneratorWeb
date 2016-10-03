@@ -16,6 +16,7 @@ const itemRoutes: Routes = [
 ]
 
 const demographicsRoutes: Routes = [
+    {path: '', pathMatch: 'full', redirectTo: 'demographics'},
     {
         path: 'demographics',
         loadChildren: 'app/demographics/demographics.module#DemographicsModule',
@@ -23,9 +24,9 @@ const demographicsRoutes: Routes = [
 ]
 
 const appRoutes: Routes = [
-  ...adminRoutes,
+  ...demographicsRoutes,
   ...itemRoutes,
-  ...demographicsRoutes
+  ...adminRoutes
 ];
 
 export const appRoutingProviders: any[] = [

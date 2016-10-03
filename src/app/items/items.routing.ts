@@ -4,7 +4,7 @@ import { Routes, RouterModule }  from '@angular/router';
 import { ItemComponent } from './item.component';
 
 const itemRoutes: Routes = [
-  { path: '', 
+  { path: '',               //route is defined in app.routing to enable lazy loading
     component: ItemComponent,
     //need to readd detail component
   }
