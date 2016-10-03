@@ -5,10 +5,11 @@ import { Item } from './item.model'
 import { ItemService } from './item.service'
 
 @Component({
-    templateUrl: 'item-list.component.html',
+    templateUrl: 'item-selector.component.html',
+    selector: "cg-item-selector"
 })
 
-export class ItemListComponent implements OnInit {
+export class ItemSelectorComponent implements OnInit {
     generalItems: Item[];
 
     constructor( 

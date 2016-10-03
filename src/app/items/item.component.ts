@@ -1,14 +1,41 @@
-// Show info about item on the character gen side
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { Router, ActivatedRoute } from '@angular/router';
+
+import { ModalDirective } from 'ng2-bootstrap/components/modal';
+
+import { Item } from './item.model'
+import { ItemService } from './item.service'
 
 @Component({
     templateUrl: 'item.component.html',
 })
 
 export class ItemComponent implements OnInit {
-    
-    constructor() {
-     }
-     
-    ngOnInit() { }
+    //view child allows you to call methods on the child component
+    @ViewChild('childModal') public childModal:ModalDirective;
+
+    generalItems: Item[];
+    selectorOpen: boolean = false;
+
+    constructor( 
+        private router: Router, 
+        private route: ActivatedRoute,
+        private service: ItemService ) { }
+
+    ngOnInit() { 
+        this.service.getItems().then(items => this.generalItems = items);
+    }
+
+    goToDetail(item: Item)
+    {
+        this.router.navigate([item.id], {relativeTo: this.route});
+    }
+
+    public showChildModal():void {
+        this.childModal.show();
+    }
+
+    public hideChildModal():void {
+        this.childModal.hide();
+    }
 }

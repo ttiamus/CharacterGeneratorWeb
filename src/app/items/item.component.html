@@ -1,3 +1,29 @@
-<!-- Display information about an item when selected in generator -->
-<h1>Items</h1>
-<router-outlet></router-outlet>
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <ul>  
+            <li *ngFor="let item of generalItems">
+                <a (click)="goToDetail(item)">{{item.name}}</a>
+            </li>
+        </ul>
+
+    </div>
+</div>
+
+<!-- Large modal -->
+<button class="btn btn-primary" (click)="itemSelectorModal.show()">Add Items</button>
+ 
+<div bsModal #itemSelectorModal="bs-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" (click)="itemSelectorModal.hide()" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h4 class="modal-title">Item Selector</h4>
+      </div>
+      <div class="modal-body">
+        <cg-item-selector></cg-item-selector>
+      </div>
+    </div>
+  </div>
+</div>
