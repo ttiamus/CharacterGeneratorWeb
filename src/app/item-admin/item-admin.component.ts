@@ -1,9 +1,9 @@
 //form for adding updating and deleteing an item
 import { Component, OnInit, OnDestroy } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, ActivatedRoute } from '@angular/router';
 
-import { Item } from './item-admin.model'
-import { ItemAdminService } from './item-admin.service'
+import { Item } from './../shared/item.model';
+import { ItemAdminService } from './item-admin.service';
 
 @Component({
     templateUrl: 'item-admin.component.html',
@@ -16,11 +16,12 @@ export class ItemAdminComponent implements OnInit, OnDestroy {
     private sub: any;
     constructor(
         private route: ActivatedRoute,
+        private router: Router,
         private service: ItemAdminService) {}
 
     ngOnInit() {
         this.sub = this.route.params.subscribe(params => {
-            let id = +params['id']; // (+) converts string 'id' to a number
+            let id = params['id']; // (+) converts string 'id' to a number
             if(id)
             {
                 this.service.getItem(id).then(item => this.item = item);
@@ -40,6 +41,13 @@ export class ItemAdminComponent implements OnInit, OnDestroy {
 
     saveItem()
     {
-        
+        this.service.saveItem(this.item)
+            .then(x => console.log('item saved'));
+    }
+
+    deleteItem(){
+        this.service.deleteItem(this.item.Id)
+            .then(x => console.log('item deleted'))
+            .then(x => this.router.navigate(['../'], {relativeTo: this.route}));    //move up a level in route
     }
 }

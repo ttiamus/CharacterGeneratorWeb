@@ -2,11 +2,11 @@
     <div class="row">
         <div class="form-group width100 ">
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                <input [(ngModel)]="character.characterName" type="text" id="characterName" class="form-control" />
+                <input [(ngModel)]="character.CharacterName" type="text" id="characterName" class="form-control" />
                 <label for="characterName">Character Name</label>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                <input [(ngModel)]="character.playerName" type="text" id="playerName" class="form-control" />
+                <input [(ngModel)]="character.PlayerName" type="text" id="playerName" class="form-control" />
                 <label for="playerName">Player Name</label>
             </div>
         </div>
@@ -18,7 +18,7 @@
                 <label for="diety">Diety</label>
             </div>
             <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                <select [(ngModel)]="character.alignment" class="form-control">
+                <select [(ngModel)]="character.Alignment" class="form-control">
                     <option [value]="alignment" *ngFor="let alignment of alignments">{{alignment}}</option>
                 </select>
                 <label for="alignment">Alignment</label>
@@ -28,18 +28,18 @@
     <div class="row">
         <div class="form-group width100">
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <select [(ngModel)]="character.gender" class="form-control">
+                <select [(ngModel)]="character.Gender" class="form-control">
                     <option [value]="'male'" >Male</option>
                     <option [value]="'female'" >Female</option>
                 </select>
                 <label for="gender">Gender</label>
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <input [(ngModel)]="character.age" type="number" id="age" class="form-control" />
+                <input [(ngModel)]="character.Age" type="number" id="age" class="form-control" />
                 <label for="age">Age</label>
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <input [(ngModel)]="character.height" type="number" id="height" class="form-control" />
+                <input [(ngModel)]="character.Height" type="number" id="height" class="form-control" />
                 <label for="height">Height</label>
             </div>
         </div>
@@ -47,21 +47,21 @@
     <div class="row">
         <div class="form-group width100" >
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <input [(ngModel)]="character.weight" type="number" id="weight" class="form-control" />
+                <input [(ngModel)]="character.Weight" type="number" id="weight" class="form-control" />
                 <label for="weight">Weight</label>
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <input [(ngModel)]="character.hair" type="text" id="hair" class="form-control" />
+                <input [(ngModel)]="character.Hair" type="text" id="hair" class="form-control" />
                 <label for="hair">Hair</label>
             </div>
             <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
-                <input [(ngModel)]="character.eyes" type="text" id="eyes" class="form-control" />
+                <input [(ngModel)]="character.Eyes" type="text" id="eyes" class="form-control" />
                 <label for="eyes">Eyes</label>
             </div>
         </div>
     </div>
 
-    <cg-stats [stats] = character.stats></cg-stats>
+    <cg-stats [stats] = character.Stats></cg-stats>
 </div>
 
 <button (click)="log()">log</button>

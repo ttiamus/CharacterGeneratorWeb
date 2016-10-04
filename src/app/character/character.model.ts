@@ -2,20 +2,20 @@ import { Stats } from '../stats/stats.model';
 import { Saves } from './saves.model';
 
 export class Character {
-    id: string = null;
+    Id: string = null;
     
-    stats: Stats = new Stats();
+    Stats: Stats = new Stats();
     
-    characterName: string = "";
-    playerName: string = "";
-    gender: string = "";
-    age: number = null;
-    height: number = null;
-    weight: number = null;
-    hair: string = "";
-    eyes: string = "";
+    CharacterName: string = "";
+    PlayerName: string = "";
+    Gender: string = "";
+    Age: number = null;
+    Height: number = null;
+    Weight: number = null;
+    Hair: string = "";
+    Eyes: string = "";
     
-    saves: Saves = new Saves();
+    Saves: Saves = new Saves();
     
     
     constructor() {}

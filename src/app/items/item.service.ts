@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
 
-import { Item } from './item.model'
+import { Item } from './../shared/item.model'
 
 let ITEMS = [
-  new Item(11, 'Bedroll', 'nap time', 'Adventuring Gear', 0.1, 5),
-  new Item(12, 'Blanket', 'swaddle me close', 'Adventuring Gear', 0.5, 3),
-  new Item(13, "Alchemist's fire", 'Burn baby burn', 'Alchemical Creations', 20, 1),
-  new Item(14, 'Lamp Oil', 'Lamp oil makes fire', 'Alchemical Creations', 0.1, 1),
-  new Item(15, 'Badger', 'This is a badger', 'Animals', 15, 20),
-  new Item(16, 'Bat', 'This is a bat', 'animals', 5, 1)
+  new Item('11', 'Bedroll', 'nap time', 'Adventuring Gear', 0.1, 5),
+  new Item('12', 'Blanket', 'swaddle me close', 'Adventuring Gear', 0.5, 3),
+  new Item('13', "Alchemist's fire", 'Burn baby burn', 'Alchemical Creations', 20, 1),
+  new Item('14', 'Lamp Oil', 'Lamp oil makes fire', 'Alchemical Creations', 0.1, 1),
+  new Item('15', 'Badger', 'This is a badger', 'Animals', 15, 20),
+  new Item('16', 'Bat', 'This is a bat', 'animals', 5, 1)
 ];
 
 let TYPES = [
@@ -43,9 +43,9 @@ let typesPromise = Promise.resolve(TYPES);
 @Injectable()
 export class ItemService {
   
-  getItem(id: number | string) 
+  getItem(id: string) 
   {
-      return itemsPromise.then(items => items.find(item => item.id === +id));
+      return itemsPromise.then(items => items.find(item => item.Id === id));
   }
 
   getItems()

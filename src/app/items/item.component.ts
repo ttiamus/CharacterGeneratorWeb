@@ -3,7 +3,7 @@ import { Router, ActivatedRoute } from '@angular/router';
 
 import { ModalDirective } from 'ng2-bootstrap/components/modal';
 
-import { Item } from './item.model'
+import { Item } from './../shared/item.model'
 import { ItemService } from './item.service'
 
 @Component({
@@ -28,7 +28,7 @@ export class ItemComponent implements OnInit {
 
     goToDetail(item: Item)
     {
-        this.router.navigate([item.id], {relativeTo: this.route});
+        this.router.navigate([item.Id], {relativeTo: this.route});
     }
 
     public showChildModal():void {
