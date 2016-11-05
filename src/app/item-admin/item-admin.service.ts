@@ -31,7 +31,7 @@ let TYPES = [
   "Technological Gear"
 ];
 
-let itemsPromise = Promise.resolve(ITEMS);
+//let itemsPromise = Promise.resolve(ITEMS);
 let typesPromise = Promise.resolve(TYPES);
 
 @Injectable()

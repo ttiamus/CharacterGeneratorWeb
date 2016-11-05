@@ -3,7 +3,7 @@ import { SharedModule }       from '../shared/shared.module';
 
 import { ModalModule }        from 'ng2-bootstrap/ng2-bootstrap';
 
-import { Item }               from './item.model';
+//import { Item }               from './item.model';
 import { ItemService }        from './item.service';
 import { ItemComponent }      from './item.component';
 import { ItemSelectorComponent } from './item-selector.component';
